@@ -1,0 +1,62 @@
+---
+
+---
+
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="section-label">About</p>
+        <h2>Built different,<br />on purpose</h2>
+      </div>
+      <div class="about-content">
+        <p>
+          ATLAS is a software development company focused on one thing: building
+          exactly what your business needs. No upselling platforms you'll outgrow,
+          no locking you into ecosystems you don't control.
+        </p>
+        <p>
+          We work directly with you to understand your operations, then design and
+          build solutions that fit — whether that's a customer-facing website, an
+          internal tool, or a system that connects everything together.
+        </p>
+        <p>
+          Small enough to care about the details. Technical enough to build it right.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-content p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+const services = [
+  {
+    icon: '{}',
+    title: 'Custom Software',
+    description:
+      'Purpose-built applications tailored to your workflows — internal tools, automations, dashboards, and integrations that off-the-shelf software can\'t deliver.',
+  },
+  {
+    icon: '</>',
+    title: 'Websites & Web Apps',
+    description:
+      'Fast, modern websites that represent your brand and convert visitors into customers. From landing pages to full web applications.',
+  },
+  {
+    icon: '>>',
+    title: 'Modernization',
+    description:
+      'Outdated spreadsheets, legacy systems, or manual processes holding you back? We turn them into streamlined, modern tools.',
+  },
+];
+---
+
+<section id="services" class="section">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h2>What we build</h2>
+    <div class="services-grid">
+      {
+        services.map((service) => (
+          <div class="service-card">
+            <span class="service-icon">{service.icon}</span>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition);
+  }
+
+  .service-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-accent-subtle);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    margin-bottom: 0.75rem;
+  }
+</style>
