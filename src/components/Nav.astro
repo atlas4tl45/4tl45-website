@@ -5,7 +5,7 @@
 <nav class="nav">
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
-      <span class="logo-mark">4TL45</span>
+      <img src="/logo.svg" alt="4TL45" class="logo-img" />
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -41,12 +41,15 @@
     gap: 0.5rem;
   }
 
-  .logo-mark {
-    font-family: var(--font-mono);
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--color-white);
+  .logo-img {
+    height: 1.5rem;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: opacity var(--transition);
+  }
+
+  .nav-logo:hover .logo-img {
+    opacity: 0.8;
   }
 
   .nav-links {
