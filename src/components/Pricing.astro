@@ -1,0 +1,180 @@
+---
+const tiers = [
+  {
+    name: 'Starter Site',
+    price: '$800 – $1,500',
+    description:
+      'A clean, professional one-page site to get your business online and looking credible.',
+    features: ['Custom design', 'Mobile-friendly', 'Contact form', 'Fast turnaround'],
+  },
+  {
+    name: 'Business Site',
+    price: '$2,000 – $4,000',
+    description:
+      'A multi-page site built to convert visitors into customers — with SEO, content strategy, and room to grow.',
+    features: ['Multiple pages', 'SEO foundations', 'Analytics', 'CMS or easy updates'],
+    featured: true,
+  },
+  {
+    name: 'Custom Web App / Tool',
+    price: 'Starting at $3,000',
+    description:
+      'A purpose-built application — scheduling systems, dashboards, client portals, automations, or anything off-the-shelf can\'t handle.',
+    features: ['Tailored to your workflow', 'Integrations', 'Ongoing support available', 'You own the code'],
+  },
+];
+---
+
+<section id="pricing" class="section">
+  <div class="container">
+    <p class="section-label">Pricing</p>
+    <h2>Straightforward pricing</h2>
+    <p class="pricing-intro">
+      Every project is different, but here's where most engagements land. No
+      surprise invoices, no scope creep — we agree on the price before work
+      starts.
+    </p>
+    <div class="pricing-grid">
+      {
+        tiers.map((tier) => (
+          <div class:list={['pricing-card', { featured: tier.featured }]}>
+            <h3>{tier.name}</h3>
+            <p class="pricing-price">{tier.price}</p>
+            <p class="pricing-desc">{tier.description}</p>
+            <ul class="pricing-features">
+              {tier.features.map((f) => (
+                <li>{f}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+    <div class="pricing-retainer">
+      <div class="retainer-content">
+        <div>
+          <h3>Monthly Retainer</h3>
+          <p>
+            Hosting, maintenance, and updates so your site stays fast, secure,
+            and up to date. Most clients land between <strong>$150 – $500/mo</strong>
+            depending on scope.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-intro {
+    margin-top: 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transition);
+  }
+
+  .pricing-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--color-accent);
+    background: linear-gradient(
+      to bottom,
+      rgba(79, 125, 249, 0.06),
+      var(--color-bg-alt)
+    );
+  }
+
+  .pricing-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pricing-desc {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .pricing-features {
+    list-style: none;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pricing-features li {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .pricing-features li::before {
+    content: '~';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  .pricing-retainer {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition);
+  }
+
+  .pricing-retainer:hover {
+    border-color: var(--color-accent);
+  }
+
+  .retainer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .retainer-content p {
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .retainer-content strong {
+    color: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .retainer-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
