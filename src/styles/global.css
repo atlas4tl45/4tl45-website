@@ -8,16 +8,16 @@
 }
 
 :root {
-  --color-bg: #0a0a0f;
-  --color-bg-alt: #12121a;
-  --color-bg-elevated: #1a1a26;
-  --color-surface: #22222e;
-  --color-border: #2a2a3a;
-  --color-text: #e8e8ed;
-  --color-text-muted: #8888a0;
-  --color-accent: #4f7df9;
-  --color-accent-hover: #6b93ff;
-  --color-accent-subtle: rgba(79, 125, 249, 0.1);
+  --color-bg: #faf9f7;
+  --color-bg-alt: #f0efec;
+  --color-bg-elevated: #e6e5e1;
+  --color-surface: #dcdbd6;
+  --color-border: #d0cfc9;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-accent: #2c4a7c;
+  --color-accent-hover: #1f3a66;
+  --color-accent-subtle: rgba(44, 74, 124, 0.08);
   --color-white: #ffffff;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
